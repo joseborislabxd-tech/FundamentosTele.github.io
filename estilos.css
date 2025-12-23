@@ -1,0 +1,217 @@
+/* =======================
+   CONFIGURACIÓN GENERAL
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(180deg, #f4f6fb, #e9ecf3);
+    color: #0a2540;
+    line-height: 1.6;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    background: linear-gradient(135deg, #0a2540, #1f4fd8);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 2.3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* =======================
+   NAV
+======================= */
+nav {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1f4fd8;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #1f4fd8;
+    color: white;
+}
+
+/* =======================
+   MAIN
+======================= */
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+main p {
+    font-size: 1.05em;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* =======================
+   CARRUSEL (UNA IMAGEN)
+======================= */
+.carrusel {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.ventana {
+    width: 420px;
+    height: 240px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    border: 4px solid white;
+}
+
+/* IMÁGENES */
+.ventana img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Imagen 2 oculta */
+.img2 {
+    opacity: 0;
+}
+
+/* INTERACCIÓN */
+.ventana:hover .img2 {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.ventana:hover .img1 {
+    opacity: 0;
+    transform: scale(1.05);
+}
+
+.layout {
+    display: flex;
+    gap: 30px;
+}
+
+.contenido {
+    flex: 3;
+}
+
+.indice-imagenes-lateral {
+    flex: 1;
+    background-color: #d8eeff;
+    padding: 15px;
+    border-left: 2px solid #5a94ff;
+    top: 20px;
+    height: fit-content;
+}
+
+.contenedor {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.contenido {
+    flex: 3;
+}
+
+.imagenes-lateral {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.imagenes-lateral h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.imagenes-lateral figure {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.imagenes-lateral img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.imagenes-lateral figcaption {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.contenedor-indice-imagenes {
+    max-height: 300px;      /* altura visible */
+    overflow-y: auto;       /* scroll vertical */
+    border: 1px solid #ccc; /* opcional, solo visual */
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.indice-imagenes {
+    margin: 0;
+    padding-left: 20px;
+}
+
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    background: linear-gradient(135deg, #1f4fd8, #0a2540);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #ffb703;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
